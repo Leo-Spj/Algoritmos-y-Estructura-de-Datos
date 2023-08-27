@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import org.example.algoritmos.Ordenamiento;
 
-public class Main {
+public class MainOrdenamiento {
     public static void main(String[] args) {
 
         Ordenamiento ordenamiento = new Ordenamiento();
