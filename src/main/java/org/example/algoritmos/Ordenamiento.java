@@ -24,6 +24,9 @@ public class Ordenamiento {
         return array;
     }
 
+    // tiempo de compilacion = lexico, semantico y sintatico
+    // tiempo de ejecucion = no se detecta en tiempo de compilacion, overflow, underflow, etc
+
     public int[] porSelección(int[] array){
         int aux;
         int indice;
