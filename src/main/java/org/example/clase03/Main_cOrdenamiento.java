@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package org.example.algoritmos.clase03;
+package org.example.clase03;
 
 /**
  *

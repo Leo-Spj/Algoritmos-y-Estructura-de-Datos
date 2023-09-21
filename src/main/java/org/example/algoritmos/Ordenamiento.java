@@ -45,4 +45,10 @@ public class Ordenamiento {
         }
         return array;
     }
+
+    public int[] heapSort ( int [] array){
+
+
+        return array;
+    }
 }
