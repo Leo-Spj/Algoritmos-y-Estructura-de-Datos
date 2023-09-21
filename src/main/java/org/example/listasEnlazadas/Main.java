@@ -4,16 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ListaEnlazadaSimple lista = new ListaEnlazadaSimple();
+        LinkedList lista = new LinkedList();
+        lista.insertar("Fatima");
+        lista.insertar("Valeria");
+        lista.insertar("Cecilia");
+        lista.insertar("Yvan");
 
-        lista.insertarNodexInicio("Leo");
-        lista.insertarNodexInicio("Vale");
-        lista.insertarNodexInicio("Yvan");
-        lista.insertarNodexInicio("Fatima");
-        lista.insertarNodexInicio("Ceci");
+        lista.imprimir();
 
-        System.out.println(lista.recorreLE());
-
-        System.out.println(lista.buscarNombre("Leo"));
     }
 }
