@@ -12,5 +12,9 @@ public class Main {
 
         lista.imprimir();
 
+        System.out.println("----------");
+
+        lista.buscar("Yvan");
+
     }
 }
