@@ -3,7 +3,7 @@ package org.example.listasEnlazadas;
 public class Nodo {
 
     private String dato;
-    private Nodo Apuntador;
+    private Nodo apuntador;
 
     Nodo(String dato){
         this.dato = dato;
@@ -18,11 +18,11 @@ public class Nodo {
     }
 
     public Nodo getApuntador() {
-        return Apuntador;
+        return apuntador;
     }
 
     public void setApuntador(Nodo next) {
-        Apuntador = next;
+        apuntador = next;
     }
 
 }

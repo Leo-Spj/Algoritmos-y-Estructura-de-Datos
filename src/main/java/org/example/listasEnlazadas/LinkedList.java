@@ -4,7 +4,19 @@ public class LinkedList {
 
     private Nodo head;
 
-    public void insertar(String dato) {
+    public void insertarInicio(String dato) {
+
+        Nodo nodo = new Nodo(dato);
+
+        if (head == null) {
+            head = nodo;
+        } else {
+            nodo.setApuntador(head);
+            head = nodo;
+        }
+    }
+
+    public void insertarFin(String dato) {
 
         Nodo nodo = new Nodo(dato);
 
@@ -21,14 +33,37 @@ public class LinkedList {
         }
     }
 
-    public void imprimir() {
+    public void eliminaInicio() {
+
+        if (head != null) {
+            head = head.getApuntador();
+        }
+    }
+
+    public void eliminaFin() {
+
+        if (head != null) {
+            Nodo temp = head;
+            Nodo temp2 = head;
+            while (temp.getApuntador() != null) {
+                temp2 = temp;
+                temp = temp.getApuntador();
+            }
+            temp2.setApuntador(null);
+        }
+    }
+
+    public String imprimir() {
 
         Nodo temp = head;
+        String cadena = "";
 
         while (temp != null) {
-            System.out.println(temp.getDato());
+            cadena += temp.getDato() + " ";
             temp = temp.getApuntador();
         }
+
+        return cadena;
     }
 
     public void buscar(String dato){
@@ -46,6 +81,22 @@ public class LinkedList {
         if (temp == null){
             System.out.println("No encontrado");
         }
+    }
+
+    public void ramdon(int n){
+        String cadena = "";
+
+        for (int i = 0; i < n; i++) {
+            int num = (int) (Math.random() * 11);
+
+            cadena += num + " ";
+
+            if(num% 2 == 0){
+                insertarFin(num + "");
+            }
+
+        }
+        System.out.println(cadena);
     }
 
 }
