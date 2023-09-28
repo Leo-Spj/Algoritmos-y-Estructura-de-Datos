@@ -99,4 +99,40 @@ public class LinkedList {
         System.out.println(cadena);
     }
 
+    public void añadirDespuesDelNodo(String despuesDelNodo, String nuevoNodo){
+
+        Nodo AgregarNodo = new Nodo(nuevoNodo);
+
+        if (head == null) {
+            head = AgregarNodo;
+        } else {
+
+            Nodo temp = head;
+
+            while (temp.getDato() != despuesDelNodo) {
+                temp = temp.getApuntador();
+            }
+
+            AgregarNodo.setApuntador(temp.getApuntador());
+            temp.setApuntador(AgregarNodo);
+        }
+
+    }
+
+    public void eliminarNodo(String nodoDatoEliminar){
+
+//        Nodo nodo = head;
+//        if(nodo.getDato() = nodoDatoEliminar){
+//
+//        } else{
+//            while(!nodo.getApuntador().getDato().equals(nodoDatoEliminar)){
+//                nodo = nodo.getApuntador();
+//            }
+//        }
+
+
+
+
+    }
+
 }
