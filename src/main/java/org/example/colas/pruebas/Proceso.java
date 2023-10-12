@@ -1,0 +1,49 @@
+package org.example.colas.pruebas;
+
+import static java.lang.Math.random;
+
+public class Proceso {
+
+    private int nombre;
+    private int tiempoTotal;
+    private int tiempoRestante;
+    private Proceso siguiente; // lo hago de tipo nodo para que pueda apuntar a otro proceso
+
+    public Proceso(int tiempoTotal) { // el nombre lo asignaré segun su posicion en la cola
+        this.tiempoTotal = tiempoTotal;
+        this.tiempoRestante = tiempoTotal;
+    }
+
+    public int getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(int nombre) {
+        this.nombre=nombre;
+    }
+
+    public int getTiempoTotal() {
+        return tiempoTotal;
+    }
+
+    public void setTiempoTotal(int tiempoTotal) {
+        this.tiempoTotal=tiempoTotal;
+    }
+
+    public int getTiempoRestante() {
+        return tiempoRestante;
+    }
+
+    public void setTiempoRestante(int tiempoRestante) {
+        this.tiempoRestante=tiempoRestante;
+    }
+
+    public Proceso getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(Proceso siguiente) {
+        this.siguiente=siguiente;
+    }
+
+}
