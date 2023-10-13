@@ -6,47 +6,22 @@ public class SimuladorProcesos {
 
             ColaDeProcesos simulacion = new ColaDeProcesos();
 
-            simulacion.agregarProceso(new Proceso(5));
-
-            simulacion.agregarProceso(new Proceso(2));
-
-            simulacion.agregarProceso(new Proceso(3));
-
-
-            System.out.println("Procesos en cola: " + simulacion.getProcesoMayor());
-
-            System.out.println(simulacion.imprimir());
-
-            simulacion.moverAlFinal();
-
-            System.out.println(simulacion.imprimir());
-
-            simulacion.moverAlFinal();
-
-            System.out.println(simulacion.imprimir());
-
-            simulacion.eliminarProceso();
-
-            System.out.println(simulacion.imprimir());
-
-            simulacion.agregarProceso(new Proceso(8));
-
-            System.out.println(simulacion.imprimir());
+            for (int i = 0; i < 3; i++) {
+                simulacion.agregarProceso(new Proceso((int) (Math.random() * 20) + 1));
+                System.out.println(simulacion.imprimir());
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
 
 
-            //eliminamos el primer proceso
-            simulacion.eliminarProceso();
-            simulacion.eliminarProceso();
-            simulacion.eliminarProceso();
-
-
-            System.out.println(simulacion.imprimir());
-
-            simulacion.agregarProceso(new Proceso(8));
-
-            System.out.println(simulacion.imprimir());
-
-
+            int segundos = 4;
+            do {
+                simulacion.procesar(segundos);
+                System.out.println(simulacion.imprimir());
+            } while (simulacion.getTamaño() > 0);
 
 
         }

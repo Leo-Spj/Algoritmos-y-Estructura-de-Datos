@@ -4,12 +4,13 @@ import static java.lang.Math.random;
 
 public class Proceso {
 
-    private int nombre;
+    private int nombre; // en la interfaz le pongo un nombre como "Proceso 1", "Proceso 2"
     private int tiempoTotal;
     private int tiempoRestante;
     private Proceso siguiente; // lo hago de tipo nodo para que pueda apuntar a otro proceso
 
-    public Proceso(int tiempoTotal) { // el nombre lo asignaré segun su posicion en la cola
+
+    public Proceso(int tiempoTotal) {
         this.tiempoTotal = tiempoTotal;
         this.tiempoRestante = tiempoTotal;
     }
